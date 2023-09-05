@@ -1,0 +1,127 @@
+/* Style the form container */
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Style the form title */
+
+#registration {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+
+/* Style form labels */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+/* Style form input fields */
+
+input[type="text"],
+input[type="email"],
+select,
+input[type="radio"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+/* Style submit button */
+
+#btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+/* Style checkboxes and radio buttons */
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+/* Optional: Add some spacing between form elements for better readability */
+
+.form label:not(:last-child),
+.form input:not([type="button"]),
+.form select {
+    margin-bottom: 10px;
+}
+
+
+/* Optional: Center-align gender labels */
+
+.form label[for="male"],
+.form label[for="female"],
+.form label[for="other"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+/* Optional: Style radio buttons and checkboxes for better visibility */
+
+.form input[type="radio"]+label::before,
+.form input[type="checkbox"]+label::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #007BFF;
+    border-radius: 2px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+
+/* Optional: Style radio buttons and checkboxes when checked */
+
+.form input[type="radio"]:checked+label::before,
+.form input[type="checkbox"]:checked+label::before {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+
+/* Optional: Add padding to the hobbies label for better alignment */
+
+.form label[for="sports"],
+.form label[for="movies"],
+.form label[for="music"] {
+    padding-right: 10px;
+}
+
+
+/* Optional: Style select element */
+
+select {
+    appearance: none;
+    padding: 10px;
+    background: transparent url('https://cdn.rawgit.com/tonystar/Select.js/master/images/icon.png') no-repeat right;
+    background-size: 15px;
+}
