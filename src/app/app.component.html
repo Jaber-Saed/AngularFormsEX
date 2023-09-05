@@ -1,34 +1,75 @@
 <div class="form">
-    <h2 id="registration" ">Registration Form</h2>
-  <form>
-      <label for="fname ">First Name</label>
-      <input type="text " id="fname " placeholder= "Your name.. ">
-      <label for="1name ">Last Name</label>
-      <input type="text " id="1name " placeholder="Your last name.. ">
-      <label for="email " ">>mail</label>
-        <input type="email" id="email" name="email" placeholder="Your last email..">
-        <label <select id="country">
-        <option value=" "australia">Australia</option>
-        <option value= "canada">Canada</option>
-        <option value= "usa">USA</option>
-        <option value= "india' ">India</option>
-        <option value= "uk">UK</option>
-                                                                                         I
-      </select>
-      <label for="gender">Gender:</label>
-        <input type="radio" id="male" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" value="female">
-        <label for="female">Female</label>
-        <input type="radio" id="other" value="other" checked>
-        <label for="other">Other</label>
-        <br><br>
-        <label>Hobbies <i>(Optional)</i></label>
-        <div class="form-inline">
-            <label><input type="checkbox" value="sports"> Sports</label>
-            <label><input type="checkbox" value= "movies"> Movies</label>
-            <label><input type="checkbox" value="music"> Music</label>
-        </div>
-        <input type="button" value="Submit" id="btn">
-        </form>
+  <h2 id="registration">Registration Form</h2>
+  <!-- the # mean local referance varible-->
+  <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <label for="fname ">First Name</label>
+    <input
+      type="text "
+      id="fname "
+      placeholder="Your name.. "
+      name="FirstName"
+      ngModel
+    />
+
+    <label for="1name ">Last Name</label>
+    <input
+      type="text "
+      id="1name "
+      placeholder="Your last name.. "
+      name="lastName"
+      ngModel
+    />
+
+    <label for="email ">mail</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Your last email.."
+      name="email"
+      ngModel
+    />
+
+    <select select id="country" name="country" ngModel>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="india' ">India</option>
+      <option value="uk">UK</option>
+      I
+    </select>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" value="male" name="gender" ngModel />
+    <label for="male">Male</label>
+    <input type="radio" id="female" value="female" name="gender" ngModel />
+    <label for="female">Female</label>
+    <input
+      type="radio"
+      id="other"
+      value="other"
+      checked
+      name="gender"
+      ngModel
+    />
+    <label for="other">Other</label>
+    <br /><br />
+
+    <label>Hobbies <i>(Optional)</i></label>
+    <div class="form-inline">
+      <label
+        ><input type="checkbox" value="sports" name="Hobbies" ngModel />
+        Sports</label
+      >
+      <label
+        ><input type="checkbox" value="movies" name="Hobbies" ngModel />
+        Movies</label
+      >
+      <label
+        ><input type="checkbox" value="music" name="Hobbies" ngModel />
+        Music</label
+      >
+    </div>
+    <input type="Submit" value="Submit" id="btn" />
+  </form>
 </div>
